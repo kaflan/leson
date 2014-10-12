@@ -3,12 +3,51 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Resume</title>
-	
+	 <!-- Latest compiled and minified CSS -->
 
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </head>
+	<!-- jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- Vendor Styles -->
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=sRoboto|Roboto+Slab&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	<!-- style -->
+	<link href='http://fonts.googleapis.com/css?family=Exo+2|Ledger&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script src="buttonAction.js"></script>
+	<!-- My style -->
 	<link rel="stylesheet" href="main.css">
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Skills', 'level'],
+          ['HTML',     5],
+          ['CSS',      4],
+          ['JavaScript',  3],
+          ['PHP', 1]
+        ]);
+
+        var options = {
+          title: 'Skills',
+          pieHole: 0.4,
+          backgroundColor: 'transparent',
+          colors:["#C56B15", "#FFC287", "#0E246A", "#1C3485"],
+          legend: {position: 'bottom'}
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
 </head>
 <body>
 	<div class="wrap">
@@ -22,41 +61,71 @@
 		</nav>
 		<div class="content">
 			<section id="about" class="row">
-				<div class="photo col-20"><img src="http://i.work.ua/jobseeker/9/9/2/01097992.jpg?63705" alt="my photo"></div>
+				<div class="photo col-20"><img src="I.jpg" alt="my photo"></div>
 
 				<article class="col-80">
 					<h1><i class="fa fa-3x fa-angellist"></i> Katrusha Andrey</h1>
 					<h3>Froent end</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, sint.</p> 
+					<p>Hello I am a beginner front end. This is my first page - the summary.</p> 
 				</article>
 			</section>
-			<section id="ed" class="row">
-		<h3 class='section-title'><i class="fa fa-2x fa-university"></i> Education 	
-					<article class="col-50">
-						<p> Hiegher<br>
-						from 09.2008 to 04.2012<br>
-						National University of Life and Environmental Sciences of Ukraine
-					</p>
-					</article> </h3>
-
-
-			<!-- end article -->
-
- 		<h3 class='section-title'> <i class="fa fa-2x fa-graduation-cap"></i>Aditional ed
-				<article class="col-50"><p>
-					
-					<a href="">Codecademy profile</a><br>
-					<a href="">Codeschool profile</a><br>
-					<a href="">Code avengersprofile</a><br>
-					 Webcamp 
-				</p></article></h3>
-			</section>
-
 			
-			<!-- end aricle -->
+			<section id="ed" class="row">
+				<article class="col-50">
+					<h3 class="section-title"><i class="fa fa-lg fa-graduation-cap"></i> College</h3>
+					 From 09.2008 to 04.2012 NUBіP, agrobіologіny, Kiev. 
+				</article><!-- end article 1 -->
+				<article class="col-50">
+					<h3 class="section-title"><i class="fa fa-lg fa-graduation-cap"></i>Additional ed</h3>
+					<a href="http://www.codecademy.com/netPro93264">Codecademy profile</a>
+					<a href="">Codeavengers profile</a><br>
+					<a href="https://www.codeschool.com/users/784590">Codeschool profile</a>
+					<a href="">Web camp</a>
+				</article><!-- end article 2 -->
+			</section><!-- end #end aricle -->
+
+		<section class="row" id="work">
+			<article class="col-50">
+				<div class="space"></div><h3 class='section-title'> <i class="fa fa-2x  fa-suitcase"></i>Auchan Hypermarket Ukraine (trade)</h3>from 10.2013 to 08.2014 (10 months) 
+				<div class="space"></div><h3 class='section-title'> <i class="fa fa-2x  fa-suitcase"></i> TOV "Fozzy-Food" (trade)</h3>The seller from 04.2013 to 10.2013 (6 months)<br>
+				<div class="space"></div><h3 class='section-title'> <i class="fa fa-2x  fa-suitcase"></i> DP Laktaliz Ukraine (Commercial)</h3>Merchandiser from 02.2012 to 09.2012 (7 months)
+			</article>
+			<!-- /.col-50 -->
+			 <article class="col-50">	
+			 		 <div id="donutchart" style="width: 100%; height: 500px;">
+			 		 	
+			 		 </div> <!--end pie -->
+			</article>
+			<!-- /.col-50 -->
+			
+				
+		</section>
+		<!-- /#work.row -->
+			<section id="contact" class="row">
+				<article class="col-50"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10175.075594901533!2d30.5300125!3d50.3895065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c8ac2e0ad45b%3A0x407804c607d65da2!2z0L_RgNC-0YHQvy4g0J3QsNGD0LrQuCwgNDMsINCa0LjRl9CyLCDQvNGW0YHRgtC-INCa0LjRl9Cy!5e0!3m2!1sru!2sua!4v1412711468420" width="500"  frameborder="0" style="border:0" width="100%" height="450" frameborder="0" style="border:0"></iframe></article>
+				
+				<!-- /.col50 -->
+				<article class="col-50">
+				<div class="secret" style="display: none" >
+					<b>My contact telephone:</b>+380959397916 <br>
+					 <b>Telephone:</b> +30933934108 <br>
+        <b>mail:</b> kaf_90@mail.ru <br>
+        <b>mail:</b> df117879@gmail.com<br>
+        
+				</div>
+				<p><a class="btn btn-primary btn-lg" class="btn btn-primary btn-lg" id="toggleSecret" role="button">Learn more&raquo;</a></p>
+				</article>
+				<!-- /.col50 -->
+			</section>
+			<!-- /#contact.row -->
+  
+		</div>	
 	</div>
 	
-		
+
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 		
 		
 	
